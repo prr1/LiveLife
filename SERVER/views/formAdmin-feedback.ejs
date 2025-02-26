@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Lifeline</title>
+    <link rel="stylesheet" href="/stylesheets/style-admin-form.css">
+    <link rel="icon" type="image/x-icon" href="pictures/[removal.ai]_tmp-6413f9f76b9b7.png">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Lifeline</title>
+    <link rel="stylesheet" href="/stylesheets/style-admin-form.css">
+    <link rel="icon" type="image/x-icon" href="pictures/[removal.ai]_tmp-6413f9f76b9b7.png">
+    <link rel="stylesheet" href="/stylesheets/style-viewUser.css">
+</head>
+<body>
+    <div class="containerr">
+        <div class="header">
+            <p>Lifeline<span>.</span> Admin<span>.</span></p>
+        </div>
+        <div class="forms-doc">
+                <div class="remove-smng">
+                    <div class="head-add" style="text-align: center;">Feedback</div>
+                    <div class="content-add">
+                        <div class="inp-add">
+                           <table>
+                                <thead>
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Mobile Number</th>
+                                        <th>Mail ID</th>
+                                        <th>Username</th> 
+                                        <th>Query</th>
+                                    </tr>
+                                  </thead>
+                                 
+                                    <%details.forEach((user)=>{ %>
+                                    <tbody>
+                                        <tr>
+                                          <td><%= user.name %></td>
+                                          <td><%= user.mobnum %></td>
+                                          <td><%= user.email %></td>
+                                          <td><%= user.username %></td>
+                                          <td><%= user.query %></td>
+                                        </tr>
+                                      </tbody>
+                                 <%})%>
+                            </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>

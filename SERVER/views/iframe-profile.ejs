@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Appointments - Lifeline.</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/[removal.ai]_tmp-6413f9f76b9b7.png">
+    <link rel="stylesheet" href="/stylesheets/style-profile.css">
+</head>
+<body>
+    <div class="containerr-2">
+        <div class="fixed-head" id="headerHome">
+            <div class="header-1">
+                <nav> 
+                    <a href="home-page" id="logoBrand" class="logo-brand">Lifeline<span>.</span></a>
+                    <ul>
+                        <li><a id="navListElements" class="li-ele nav-element" href="home-page">Home</a></li>
+                        <li><a id="navListElements" class="li-ele nav-element" href="blogs">Blogs</a></li>
+                        <li><a id="navListElements" class="li-ele nav-element" href="home">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="head-2">
+            Your Appointments
+        </div>
+        <form class="another-2" method="post" action="/prof" >
+            <input type="text" name="usernameUse" value="<%= username %>" style="display: none;">
+            <button class="btn1">Back</button>
+        </form>
+        <div class="june">
+            <% data.forEach((user)=>{%>
+            <div class="history">
+                <div class="date">
+                    <b><%= user.Date%></b>
+                </div>
+                <div class="content">
+                    <p>Dr. <%= user.docName%></p>
+                    <p><%= user.hospID%></p>
+                    <% if(user.approved == 'false'){ %>
+                        <p class="status">Waiting for approval</p>
+                    <% }else{ %>
+                        <p class="status-yes">Approved</p>
+                    <% } %>
+                </div>
+                <div class="opts">
+                    <form method="post" action="/bookApp" class="another">
+                        <input type="text" name="docID" value="<%= user.docID %>" style="display: none;">
+                        <input type="text" name="hID" value="<%= user.hospID %>" style="display: none;">
+                        <button class="btns">Book another Appointment</button>
+                    </form>
+                </div>
+            </div>
+            <%}) %>
+            <div class="empty"></div>
+        </div> 
+    </div>
+</body>
+</html>

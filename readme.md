@@ -58,5 +58,3 @@ This Web Portal is designed to help people to find their Ideal Hospital or Ideal
      Backend: Node.js, Express.js, MongoDB
      Frontend: HTML/CSS,javascript
      Additional tools: Git, GitHub
-
-### GitHub link:https://github.com/Heshvitha/Lifeline-fsd
